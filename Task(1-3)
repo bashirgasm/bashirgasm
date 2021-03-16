@@ -24,7 +24,7 @@ spark.sql("""
 select * from requestView
 """).dropDuplicates("TimeSt","Latitude","Longitude")
  df.select("_ID","TimeSt","Country","Province","City","Latitude","Longitude")
-.dropDuplicates("TimeSt","Latitude","Longitude")
+.dropDuplicates("TimeSt","Latitude","Longitude") // Task(1)
 val poischema = StructType(Array(
     StructField("POIID", StringType, true),
     StructField("PoiLatitude", StringType, true),
